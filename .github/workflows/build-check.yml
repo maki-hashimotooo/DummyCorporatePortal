@@ -1,0 +1,37 @@
+name: Build Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Checkout code
+        uses: actions/checkout@v3
+
+      - name: 📁 Move into DummyCorporatePortal
+        run: cd DummyCorporatePortal
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: 📦 Install dependencies
+        run: cd DummyCorporatePortal && npm install
+
+      - name: 🛠 Build project
+        run: cd DummyCorporatePortal && npm run build
+
+      - name: 🔍 Check if index.html exists
+        run: |
+          if [ -f DummyCorporatePortal/dist/public/index.html ]; then
+            echo "✅ index.html found"
+          else
+            echo "❌ index.html NOT found"
+            exit 1
+          fi
