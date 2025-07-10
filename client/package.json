@@ -1,8 +1,14 @@
-// client/package.json の scripts に追加（無い場合は新規に）
 {
   "scripts": {
-    "dev": "vite",           // ローカル開発用
-    "build": "vite build",   // 本番用ビルド（→ dist/ に出力）
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
