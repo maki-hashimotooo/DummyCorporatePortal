@@ -22,10 +22,10 @@ jobs:
           node-version: 20
 
       - name: 📦 Install dependencies
-        run: cd DummyCorporatePortal && npm install
+        run: npm install
 
       - name: 🛠 Build project
-        run: cd DummyCorporatePortal && npm run build
+        run: npm install
 
       - name: 🔍 Check if index.html exists
         run: |
