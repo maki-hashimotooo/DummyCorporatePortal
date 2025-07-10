@@ -1,0 +1,8 @@
+// client/package.json の scripts に追加（無い場合は新規に）
+{
+  "scripts": {
+    "dev": "vite",           // ローカル開発用
+    "build": "vite build",   // 本番用ビルド（→ dist/ に出力）
+    "preview": "vite preview"
+  }
+}
