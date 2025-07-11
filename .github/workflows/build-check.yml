@@ -26,7 +26,7 @@ jobs:
 
       - name: 🔍 Check if index.html exists
         run: |
-          if [ -f DummyCorporatePortal/client/index.html ]; then
+          if [ -f ./client/index.html ]; then
             echo "✅ index.html found"
           else
             echo "❌ index.html NOT found"
